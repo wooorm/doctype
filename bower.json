@@ -1,0 +1,36 @@
+{
+  "name": "doctype",
+  "main": "doctype.js",
+  "description": "Information for HTML doctypes",
+  "license": "MIT",
+  "keywords": [
+    "xhtml",
+    "html",
+    "doctype",
+    "doctypes",
+    "info",
+    "information"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wooorm/doctype.git"
+  },
+  "authors": [
+    "Titus Wormer <tituswormer@gmail.com>"
+  ],
+  "ignore": [
+    ".*",
+    "*.log",
+    "*.md",
+    "build/",
+    "components/",
+    "coverage/",
+    "node_modules/",
+    "build.js",
+    "example.js",
+    "index.js",
+    "test.js",
+    "component.json",
+    "package.json"
+  ]
+}

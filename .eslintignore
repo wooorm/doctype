@@ -1,0 +1,6 @@
+build/
+components/
+coverage/
+build.js
+doctype.js
+doctype.min.js

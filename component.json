@@ -1,0 +1,18 @@
+{
+  "name": "doctype",
+  "version": "0.0.0",
+  "description": "Information for HTML doctypes",
+  "license": "MIT",
+  "keywords": [
+    "xhtml",
+    "html",
+    "doctype",
+    "doctypes",
+    "info",
+    "information"
+  ],
+  "repository": "wooorm/doctype",
+  "scripts": [
+    "index.js"
+  ]
+}
