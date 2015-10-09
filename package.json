@@ -13,7 +13,7 @@
   ],
   "files": [
     "index.js",
-    "LICENSE"
+    "index.json"
   ],
   "repository": {
     "type": "git",

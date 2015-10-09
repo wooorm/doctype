@@ -14,5 +14,8 @@
   "repository": "wooorm/doctype",
   "scripts": [
     "index.js"
+  ],
+  "json": [
+    "index.json"
   ]
 }
