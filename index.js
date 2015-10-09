@@ -60,6 +60,6 @@ function getDoctype(name) {
  * Expose.
  */
 
-getDoctype.doctypes = doctypes;
+getDoctype.all = doctypes;
 
 module.exports = getDoctype;

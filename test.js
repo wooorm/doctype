@@ -37,5 +37,7 @@ test('doctype(name)', function (t) {
     t.deepEqual(doctype('4.01 transitional'), 'HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\"');
     t.deepEqual(doctype('4.01Transitional'), 'HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\"');
 
+    t.deepEqual(doctype.all, require('./index.json'));
+
     t.end();
 });
