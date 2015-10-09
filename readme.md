@@ -37,7 +37,7 @@ Parameters:
 
 *   `name` (`string`) — Case-insensitive, white-space insensitive name:
     stripped from white-space, casing, fractional-part of version, `'HTML'`
-    or `'XHTML'` prefix, and suffixes are normalised (`Transitional` and to
+    or `'XHTML'` prefix, and suffixes are normalised (`Transitional` to
     `t`).
 
 Returns: `string?` — When applicable.
