@@ -2,6 +2,11 @@
 
 <!--lint disable no-multiple-toplevel-headings -->
 
+1.1.0 / 2015-10-10
+==================
+
+*   Add more doctypes, including MathML, SVG ([3b1970c](https://github.com/wooorm/doctype/commit/3b1970c))
+
 1.0.1 / 2015-10-09
 ==================
 
