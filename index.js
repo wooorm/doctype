@@ -26,12 +26,11 @@ function cleanDoctype(name) {
     return String(name)
         .toLowerCase()
         .replace(/([a-z]+|\d+)/, ' $1 ')
-        .replace(/x?html /, '')
         .replace(/\.0+(?!\d)/, '')
         .replace(/\.01/, '')
         .replace(/\.2/, '')
+        .replace(/\b(xhtml|html|mathml|svg|full|basic|tiny|strict|frameset|basic)\b/g, character)
         .replace(/ t(?:ransitional)?/, '')
-        .replace(/ (strict|frameset)/, character)
         .replace(/\s+/g, '');
 }
 
@@ -53,8 +52,18 @@ for (key in doctypes) {
  * @return {string?} - Doctype.
  */
 function getDoctype(name) {
-    return shortcodes[cleanDoctype(name)] || null;
+    var key = cleanDoctype(name);
+    return shortcodes[key] || shortcodes['h' + key] || null;
 }
+
+/*
+ * Ensure proper non-versioned types work:
+ */
+
+shortcodes.h = shortcodes.h5;
+shortcodes.s = shortcodes['s1.1f'];
+shortcodes.m = shortcodes.m2;
+shortcodes.x = shortcodes['x1.1'];
 
 /*
  * Expose.
