@@ -28,7 +28,7 @@ console.log(doctype('svg'));
 
 ## API
 
-### doctype(name)
+### `doctype(name)`
 
 Get a doctype, where `name` stripped from white-space, casing,
 fractional-part of version, `'HTML'` or `'XHTML'` prefix, and
@@ -36,7 +36,7 @@ suffixes are normalised (`Transitional` to `t`).
 
 Returns: `string?` — When applicable.
 
-### doctype.all
+### `doctype.all`
 
 ```js
 {
