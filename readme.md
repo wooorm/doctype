@@ -46,8 +46,8 @@ Returns: `string?` — When applicable.
 }
 ```
 
-`Object` mapping doctype names to doctype strings. This gives raw access to
-the information returned by [`doctype()`](#doctypename).
+`Object` mapping doctype names to doctype strings.  This gives raw
+access to the information returned by [`doctype()`](#doctypename).
 
 ## License
 
