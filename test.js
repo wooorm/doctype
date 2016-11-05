@@ -1,21 +1,10 @@
-/**
- * @author Titus Wormer
- * @copyright 2015 Titus Wormer
- * @license MIT
- * @module doctype
- * @fileoverview Test suite for `doctype`.
- */
-
 'use strict';
 
 /* Dependencies. */
 var test = require('tape');
 var doctype = require('./');
 
-/*
- * Tests.
- */
-
+/* Tests. */
 test('doctype(name)', function (t) {
   t.deepEqual(doctype('foo'), null);
 

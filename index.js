@@ -1,11 +1,3 @@
-/**
- * @author Titus Wormer
- * @copyright 2015 Titus Wormer
- * @license MIT
- * @module doctype
- * @fileoverview Information for HTML doctypes.
- */
-
 'use strict';
 
 /* Dependencies. */
