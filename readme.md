@@ -49,6 +49,19 @@ Returns: `string?` — When applicable.
 `Object` mapping doctype names to doctype strings.  This gives raw
 access to the information returned by [`doctype()`](#doctypename).
 
+## Related
+
+*   [`html-tag-names`](https://github.com/wooorm/html-tag-names)
+    — List of HTML tag-names
+*   [`html-element-attributes`](https://github.com/wooorm/html-element-attributes)
+    — Map of HTML attributes
+*   [`html-void-elements`](https://github.com/wooorm/html-void-elements)
+    — List of void HTML tag-names
+*   [`property-information`](https://github.com/wooorm/property-information)
+    — Information on HTML properties
+*   [`web-namespaces`](https://github.com/wooorm/web-namespaces)
+    — Map of web namespaces
+
 ## License
 
 [MIT][license] © [Titus Wormer][author]
