@@ -1,10 +1,8 @@
 'use strict';
 
-/* Dependencies. */
 var test = require('tape');
 var doctype = require('./');
 
-/* Tests. */
 test('doctype(name)', function (t) {
   t.deepEqual(doctype('foo'), null);
 

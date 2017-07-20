@@ -1,9 +1,7 @@
 'use strict';
 
-/* Dependencies. */
 var doctypes = require('./index.json');
 
-/* Expose. */
 module.exports = getDoctype;
 getDoctype.all = doctypes;
 
@@ -16,18 +14,13 @@ shortcodes.s = shortcodes['s1.1f'];
 shortcodes.m = shortcodes.m2;
 shortcodes.x = shortcodes['x1.1'];
 
-/**
- * Get a doctype from a name.
- *
- * @param {number|string} name - Doctype name.
- * @return {string?} - Doctype.
- */
+/* Get a doctype from a name. */
 function getDoctype(name) {
   var key = cleanDoctype(name);
   return shortcodes[key] || shortcodes['h' + key] || null;
 }
 
-/** Clean and simplify a doctype name. */
+/* Clean and simplify a doctype name. */
 function cleanDoctype(name) {
   return String(name)
     .toLowerCase()
@@ -40,7 +33,7 @@ function cleanDoctype(name) {
     .replace(/\s+/g, '');
 }
 
-/** Get the first character of the second parameter. */
+/* Get the first character of the second parameter. */
 function character(_, value) {
   return value.charAt(0);
 }
