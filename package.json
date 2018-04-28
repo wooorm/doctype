@@ -13,7 +13,7 @@
     "info",
     "information"
   ],
-  "repository": "https://github.com/wooorm/doctype",
+  "repository": "wooorm/doctype",
   "bugs": "https://github.com/wooorm/doctype/issues",
   "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
   "contributors": [
