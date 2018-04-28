@@ -5,3 +5,4 @@ coverage/
 node_modules/
 doctype.js
 doctype.min.js
+yarn.lock
