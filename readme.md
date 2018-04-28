@@ -13,17 +13,19 @@ npm install doctype
 ## Usage
 
 ```js
-doctype(5);
-//=> 'html'
+var doctype = require('doctype')
 
-doctype(4.01);
-doctype('4.01t');
-doctype('4.01 Transitional');
-doctype('HTML 4.01 Transitional');
-//=> 'HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"'
+doctype(5)
+// => 'html'
 
-doctype('svg');
-//=> 'svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"'
+doctype(4.01)
+doctype('4.01t')
+doctype('4.01 Transitional')
+doctype('HTML 4.01 Transitional')
+// => 'HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"'
+
+doctype('svg')
+// => 'svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"'
 ```
 
 ## API
