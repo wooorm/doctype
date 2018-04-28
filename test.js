@@ -1,7 +1,7 @@
 'use strict';
 
 var test = require('tape');
-var doctype = require('./');
+var doctype = require('.');
 
 test('doctype(name)', function (t) {
   t.deepEqual(doctype('foo'), null);
