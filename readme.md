@@ -82,4 +82,4 @@ access to the information returned by [`doctype()`](#doctypename).
 
 [license]: license
 
-[author]: http://wooorm.com
+[author]: https://wooorm.com
