@@ -1,4 +1,9 @@
-# doctype [![Build Status][travis-badge]][travis] [![Coverage Status][codecov-badge]][codecov]
+# doctype
+
+[![Build][build-badge]][build]
+[![Coverage][coverage-badge]][coverage]
+[![Downloads][downloads-badge]][downloads]
+[![Size][size-badge]][size]
 
 Info on HTML / XHTML / MathML / SVG doctypes.
 
@@ -70,13 +75,21 @@ access to the information returned by [`doctype()`](#doctypename).
 
 <!-- Definitions -->
 
-[travis-badge]: https://img.shields.io/travis/wooorm/doctype.svg
+[build-badge]: https://img.shields.io/travis/wooorm/doctype.svg
 
-[travis]: https://travis-ci.org/wooorm/doctype
+[build]: https://travis-ci.org/wooorm/doctype
 
-[codecov-badge]: https://img.shields.io/codecov/c/github/wooorm/doctype.svg
+[coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/doctype.svg
 
-[codecov]: https://codecov.io/github/wooorm/doctype
+[coverage]: https://codecov.io/github/wooorm/doctype
+
+[downloads-badge]: https://img.shields.io/npm/dm/doctype.svg
+
+[downloads]: https://www.npmjs.com/package/doctype
+
+[size-badge]: https://img.shields.io/bundlephobia/minzip/doctype.svg
+
+[size]: https://bundlephobia.com/result?p=doctype
 
 [npm]: https://docs.npmjs.com/cli/install
 
