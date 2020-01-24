@@ -7,15 +7,15 @@
 
 Info on HTML / XHTML / MathML / SVG doctypes.
 
-## Installation
+## Install
 
 [npm][]:
 
-```bash
+```sh
 npm install doctype
 ```
 
-## Usage
+## Use
 
 ```js
 var doctype = require('doctype')
@@ -37,9 +37,9 @@ doctype('svg')
 
 ### `doctype(name)`
 
-Get a doctype, where `name` stripped from white-space, casing,
-fractional-part of version, `'HTML'` or `'XHTML'` prefix, and
-suffixes are normalised (`Transitional` to `t`).
+Get a doctype, where `name` stripped from white-space, casing, fractional-part
+of version, `'HTML'` or `'XHTML'` prefix, and suffixes are normalised
+(`Transitional` to `t`).
 
 Returns: `string?` — When applicable.
 
