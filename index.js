@@ -29,7 +29,7 @@ function cleanDoctype(name) {
     .replace(/\.01/, '')
     .replace(/\.2/, '')
     .replace(
-      /\b(xhtml|html|mathml|svg|full|basic|tiny|strict|frameset|basic)\b/g,
+      /\b(xhtml|html|mathml|svg|full|basic|tiny|strict|frameset)\b/g,
       character
     )
     .replace(/ t(?:ransitional)?/, '')

@@ -3,7 +3,7 @@
 var test = require('tape')
 var doctype = require('.')
 
-test('doctype(name)', function(t) {
+test('doctype(name)', function (t) {
   t.deepEqual(doctype('foo'), null)
 
   t.deepEqual(doctype(5), 'html')
