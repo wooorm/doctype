@@ -9,6 +9,9 @@ Info on HTML / XHTML / MathML / SVG doctypes.
 
 ## Install
 
+This package is ESM only: Node 12+ is needed to use it and it must be `import`ed
+instead of `require`d.
+
 [npm][]:
 
 ```sh
@@ -18,32 +21,35 @@ npm install doctype
 ## Use
 
 ```js
-var doctype = require('doctype')
+import {doctype} from 'doctype'
 
-doctype(5)
-// => 'html'
+console.log(doctype(5)) // => 'html'
 
-doctype(4.01)
-doctype('4.01t')
-doctype('4.01 Transitional')
-doctype('HTML 4.01 Transitional')
+console.log(doctype(4.01))
+console.log(doctype('4.01t'))
+console.log(doctype('4.01 Transitional'))
+console.log(doctype('HTML 4.01 Transitional'))
 // => 'HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"'
 
-doctype('svg')
+console.log(doctype('svg'))
 // => 'svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"'
 ```
 
 ## API
 
+This package exports the following identifiers: [`doctype`](#doctypename) and
+[`doctypes`](#doctypes).
+There is no default export.
+
 ### `doctype(name)`
 
-Get a doctype, where `name` stripped from white-space, casing, fractional-part
-of version, `'HTML'` or `'XHTML'` prefix, and suffixes are normalised
-(`Transitional` to `t`).
+Get a doctype, where `name` is stripped from white space, casing,
+fractional-part of version, `'HTML'` or `'XHTML'` prefix, and suffixes are
+normalised (`Transitional` to `t`).
 
 Returns: `string?` — When applicable.
 
-### `doctype.all`
+### `doctypes`
 
 ```js
 {
@@ -53,8 +59,9 @@ Returns: `string?` — When applicable.
 }
 ```
 
-`Object` mapping doctype names to doctype strings.  This gives raw
-access to the information returned by [`doctype()`](#doctypename).
+`Object` mapping doctype names to doctype strings.
+This gives raw access to the information returned by
+[`doctype()`](#doctypename).
 
 ## Related
 

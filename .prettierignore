@@ -1,5 +1,2 @@
 coverage/
-doctype.js
-doctype.min.js
-*.json
 *.md

@@ -1,7 +1,5 @@
-'use strict'
-
-var test = require('tape')
-var doctype = require('.')
+import test from 'tape'
+import {doctype} from './index.js'
 
 test('doctype(name)', function (t) {
   t.deepEqual(doctype('foo'), null)
@@ -44,8 +42,6 @@ test('doctype(name)', function (t) {
     doctype('m'),
     'math PUBLIC "-//W3C//DTD MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/mathml2.dtd"'
   )
-
-  t.deepEqual(doctype.all, require('./index.json'))
 
   t.end()
 })
