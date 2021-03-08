@@ -75,9 +75,9 @@ access to the information returned by [`doctype()`](#doctypename).
 
 <!-- Definitions -->
 
-[build-badge]: https://img.shields.io/travis/wooorm/doctype.svg
+[build-badge]: https://github.com/wooorm/doctype/workflows/main/badge.svg
 
-[build]: https://travis-ci.org/wooorm/doctype
+[build]: https://github.com/wooorm/doctype/actions
 
 [coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/doctype.svg
 
