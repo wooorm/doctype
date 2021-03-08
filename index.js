@@ -45,7 +45,12 @@ shortcodes.s = shortcodes['s1.1f']
 shortcodes.m = shortcodes.m2
 shortcodes.x = shortcodes['x1.1']
 
-// Get a doctype from a name.
+/**
+ * Get a doctype from a name.
+ *
+ * @param {number|string} name
+ * @returns {string} Doctype
+ */
 export function doctype(name) {
   var key = cleanDoctype(name)
   return shortcodes[key] || shortcodes['h' + key] || null
