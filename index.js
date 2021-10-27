@@ -1,6 +1,4 @@
-'use strict'
-
-export var doctypes = {
+export const doctypes = {
   'HTML 5': 'html',
   'HTML 4.01 Strict':
     'HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"',
@@ -36,8 +34,8 @@ export var doctypes = {
 }
 
 // Gather all doctypes as shortcodes.
-var own = {}.hasOwnProperty
-var shortcodes = gather()
+const own = {}.hasOwnProperty
+const shortcodes = gather()
 
 // Ensure proper non-versioned types work:
 shortcodes.h = shortcodes.h5
@@ -52,14 +50,14 @@ shortcodes.x = shortcodes['x1.1']
  * @returns {string} Doctype
  */
 export function doctype(name) {
-  var key = cleanDoctype(name)
+  const key = cleanDoctype(name)
   return shortcodes[key] || shortcodes['h' + key] || null
 }
 
 // Clean all doctypes.
 function gather() {
-  var codes = {}
-  var key
+  const codes = {}
+  let key
 
   for (key in doctypes) {
     if (own.call(doctypes, key)) {
