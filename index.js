@@ -48,7 +48,11 @@ shortcodes.x = shortcodes['x1.1']
  * Get a doctype from a name.
  *
  * @param {number|string} name
- * @returns {string|null} Doctype
+ *   Fuzzy doctype name which is stripped from white space, casing, fractional
+ *   part of version, `'HTML'` or `'XHTML'` prefix, and whose suffixes are
+ *   normalised (`Transitional` to `t`).
+ * @returns {string|null}
+ *   Doctype string when found.
  */
 export function doctype(name) {
   const key = cleanDoctype(name)

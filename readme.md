@@ -7,15 +7,41 @@
 
 Info on HTML / XHTML / MathML / SVG doctypes.
 
+## Contents
+
+*   [Install](#install)
+*   [Use](#use)
+*   [API](#api)
+    *   [`doctype(name)`](#doctypename)
+    *   [`doctypes`](#doctypes)
+*   [Types](#types)
+*   [Compatibility](#compatibility)
+*   [Security](#security)
+*   [Related](#related)
+*   [Contribute](#contribute)
+*   [License](#license)
+
 ## Install
 
-This package is ESM only: Node 12+ is needed to use it and it must be `import`ed
-instead of `require`d.
-
-[npm][]:
+This package is [ESM only][esm].
+In Node.js (version 12.20+, 14.14+, or 16.0+), install with [npm][]:
 
 ```sh
 npm install doctype
+```
+
+In Deno with [Skypack][]:
+
+```js
+import {doctype} from 'https://cdn.skypack.dev/doctype@3?dts'
+```
+
+In browsers with [Skypack][]:
+
+```html
+<script type="module">
+  import {doctype} from 'https://cdn.skypack.dev/doctype@3?min'
+</script>
 ```
 
 ## Use
@@ -43,38 +69,62 @@ There is no default export.
 
 ### `doctype(name)`
 
-Get a doctype, where `name` is stripped from white space, casing,
-fractional-part of version, `'HTML'` or `'XHTML'` prefix, and suffixes are
-normalised (`Transitional` to `t`).
+Get a doctype from a fuzzy doctype name.
 
-Returns: `string?` — When applicable.
+###### Parameters
+
+*   `name` (`string`, `number`)
+    — fuzzy doctype name which is stripped from white space, casing, fractional
+    part of version, `'HTML'` or `'XHTML'` prefix, and whose suffixes are
+    normalized (`Transitional` to `t`)
+
+###### Returns
+
+`string?` — doctype string when found.
 
 ### `doctypes`
+
+`Object` mapping doctype names to doctype strings.
 
 ```js
 {
   'HTML 5': 'html',
   'HTML 4.01 Strict': 'HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"',
-  // ...
+  // …
 }
 ```
 
-`Object` mapping doctype names to doctype strings.
-This gives raw access to the information returned by
-[`doctype()`](#doctypename).
+## Types
+
+This package is fully typed with [TypeScript][].
+
+## Compatibility
+
+This package is at least compatible with all maintained versions of Node.js.
+As of now, that is Node.js 12.20+, 14.14+, and 16.0+.
+It also works in Deno and modern browsers.
+
+## Security
+
+This package is safe.
 
 ## Related
 
-*   [`html-tag-names`](https://github.com/wooorm/html-tag-names)
-    — List of HTML tag-names
-*   [`html-element-attributes`](https://github.com/wooorm/html-element-attributes)
-    — Map of HTML attributes
-*   [`html-void-elements`](https://github.com/wooorm/html-void-elements)
-    — List of void HTML tag-names
-*   [`property-information`](https://github.com/wooorm/property-information)
-    — Information on HTML properties
-*   [`web-namespaces`](https://github.com/wooorm/web-namespaces)
-    — Map of web namespaces
+*   [`wooorm/html-tag-names`](https://github.com/wooorm/html-tag-names)
+    — list of HTML tag names
+*   [`wooorm/html-element-attributes`](https://github.com/wooorm/html-element-attributes)
+    — map of HTML attributes
+*   [`wooorm/html-void-elements`](https://github.com/wooorm/html-void-elements)
+    — list of void HTML tag-names
+*   [`wooorm/property-information`](https://github.com/wooorm/property-information)
+    — info on HTML, SVG, etc properties
+*   [`wooorm/web-namespaces`](https://github.com/wooorm/web-namespaces)
+    — map of web namespaces
+
+## Contribute
+
+Yes please!
+See [How to Contribute to Open Source][contribute].
 
 ## License
 
@@ -100,6 +150,14 @@ This gives raw access to the information returned by
 
 [npm]: https://docs.npmjs.com/cli/install
 
+[skypack]: https://www.skypack.dev
+
 [license]: license
 
 [author]: https://wooorm.com
+
+[esm]: https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
+
+[typescript]: https://www.typescriptlang.org
+
+[contribute]: https://opensource.guide/how-to-contribute/
