@@ -35,6 +35,7 @@ export const doctypes = {
 
 // Gather all doctypes as shortcodes.
 const own = {}.hasOwnProperty
+/** @type {Record<string, string>} */
 const shortcodes = gather()
 
 // Ensure proper non-versioned types work:
@@ -47,16 +48,23 @@ shortcodes.x = shortcodes['x1.1']
  * Get a doctype from a name.
  *
  * @param {number|string} name
- * @returns {string} Doctype
+ * @returns {string|null} Doctype
  */
 export function doctype(name) {
   const key = cleanDoctype(name)
-  return shortcodes[key] || shortcodes['h' + key] || null
+  const html = 'h' + key
+  return own.call(shortcodes, key)
+    ? shortcodes[key]
+    : own.call(shortcodes, html)
+    ? shortcodes[html]
+    : null
 }
 
 // Clean all doctypes.
 function gather() {
+  /** @type {Record<string, string>} */
   const codes = {}
+  /** @type {keyof doctypes} */
   let key
 
   for (key in doctypes) {
@@ -68,7 +76,12 @@ function gather() {
   return codes
 }
 
-// Clean and simplify a doctype name.
+/**
+ * Clean and simplify a doctype name.
+ *
+ * @param {string|number} name
+ * @returns {string}
+ */
 function cleanDoctype(name) {
   return String(name)
     .toLowerCase()
