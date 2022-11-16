@@ -1,3 +1,8 @@
+/**
+ * Map of doctype names to doctype values.
+ *
+ * @type {Record<string, string>}
+ */
 export const doctypes = {
   'HTML 5': 'html',
   'HTML 4.01 Strict':
@@ -38,7 +43,7 @@ const own = {}.hasOwnProperty
 /** @type {Record<string, string>} */
 const shortcodes = gather()
 
-// Ensure proper non-versioned types work:
+// Ensure proper non-versioned names work:
 shortcodes.h = shortcodes.h5
 shortcodes.s = shortcodes['s1.1f']
 shortcodes.m = shortcodes.m2

@@ -1,7 +1,7 @@
 {
   "name": "doctype",
   "version": "3.0.1",
-  "description": "Information for HTML doctypes",
+  "description": "Info on HTML doctypes",
   "license": "MIT",
   "keywords": [
     "xhtml",

@@ -5,10 +5,12 @@
 [![Downloads][downloads-badge]][downloads]
 [![Size][size-badge]][size]
 
-Info on HTML / XHTML / MathML / SVG doctypes.
+Info on HTML, XHTML, MathML, and SVG doctypes.
 
 ## Contents
 
+*   [What is this?](#what-is-this)
+*   [When should I use this?](#when-should-i-use-this)
 *   [Install](#install)
 *   [Use](#use)
 *   [API](#api)
@@ -21,10 +23,20 @@ Info on HTML / XHTML / MathML / SVG doctypes.
 *   [Contribute](#contribute)
 *   [License](#license)
 
+## What is this?
+
+This package lists known doctypes and exposes a function to turn a fuzzy name
+(such as `html`, `5`) into a corresponding doctype.
+
+## When should I use this?
+
+This package is rather niche, using something other than `<!doctype html>` is
+almost never needed anymore.
+
 ## Install
 
 This package is [ESM only][esm].
-In Node.js (version 12.20+, 14.14+, or 16.0+), install with [npm][]:
+In Node.js (version 14.14+, 16.0+), install with [npm][]:
 
 ```sh
 npm install doctype
@@ -63,8 +75,7 @@ console.log(doctype('svg'))
 
 ## API
 
-This package exports the following identifiers: [`doctype`](#doctypename) and
-[`doctypes`](#doctypes).
+This package exports the identifiers `doctype` and `doctypes`.
 There is no default export.
 
 ### `doctype(name)`
@@ -80,11 +91,11 @@ Get a doctype from a fuzzy doctype name.
 
 ###### Returns
 
-`string?` — doctype string when found.
+Doctype string when found (`string|null`).
 
 ### `doctypes`
 
-`Object` mapping doctype names to doctype strings.
+Map of doctype names to doctype values (`Record<string, string>`).
 
 ```js
 {
@@ -97,11 +108,12 @@ Get a doctype from a fuzzy doctype name.
 ## Types
 
 This package is fully typed with [TypeScript][].
+It exports no additional types.
 
 ## Compatibility
 
 This package is at least compatible with all maintained versions of Node.js.
-As of now, that is Node.js 12.20+, 14.14+, and 16.0+.
+As of now, that is Node.js 14.14+ and 16.0+.
 It also works in Deno and modern browsers.
 
 ## Security
